@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{a1b2c3d4-e5f6-7890-abcd-ef1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="driver">
+      <UniqueIdentifier>{39576766-f86b-4ac7-87ab-2b2bb7999d7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{f2c70413-8f19-4815-8694-a8e8329adc2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="menu">
+      <UniqueIdentifier>{7e669273-16d7-46bd-8857-408dd8b9f39c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="menu\ImGui">
+      <UniqueIdentifier>{3bffe37d-c14f-4624-983d-c1dd2b2e4528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk-offsets">
+      <UniqueIdentifier>{d5fa63e8-277b-4e84-8d9b-94ce57e000d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{87ea4ccf-ced1-4c3d-a68a-019d6fdd7d89}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Entry.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\KernelInterface.cpp">
+      <Filter>driver</Filter>
+    </ClCompile>
+    <ClCompile Include="menu\TextureLoader.cpp">
+      <Filter>menu</Filter>
+    </ClCompile>
+    <ClCompile Include="menu\ImGui\imgui.cpp">
+      <Filter>menu\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="menu\ImGui\imgui_demo.cpp">
+      <Filter>menu\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="menu\ImGui\imgui_draw.cpp">
+      <Filter>menu\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="menu\ImGui\imgui_tables.cpp">
+      <Filter>menu\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="menu\ImGui\imgui_widgets.cpp">
+      <Filter>menu\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="menu\ImGui\imgui_impl_dx11.cpp">
+      <Filter>menu\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="menu\ImGui\imgui_impl_dx9.cpp">
+      <Filter>menu\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="menu\ImGui\imgui_impl_win32.cpp">
+      <Filter>menu\ImGui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="driver\communication.h">
+      <Filter>driver</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\KernelInterface.h">
+      <Filter>driver</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\Includes\Structures.h">
+      <Filter>driver</Filter>
+    </ClInclude>
+    <ClInclude Include="game\Gameloop.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\Aimbot\Aimbot.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\Drawing\Draw.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\Exploits\Exploits.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\world-esp\WorldESP.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\menu.h">
+      <Filter>menu</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\overlay.h">
+      <Filter>menu</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\icons.h">
+      <Filter>menu</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\Font_bytes.h">
+      <Filter>menu</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\TextureLoader.h">
+      <Filter>menu</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\ImGui\imconfig.h">
+      <Filter>menu\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\ImGui\imgui.h">
+      <Filter>menu\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\ImGui\imgui_internal.h">
+      <Filter>menu\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\ImGui\imgui_impl_dx11.h">
+      <Filter>menu\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\ImGui\imgui_impl_dx9.h">
+      <Filter>menu\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\ImGui\imgui_impl_win32.h">
+      <Filter>menu\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\ImGui\imstb_rectpack.h">
+      <Filter>menu\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\ImGui\imstb_textedit.h">
+      <Filter>menu\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\ImGui\imstb_truetype.h">
+      <Filter>menu\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\ImGui\stb_image.h">
+      <Filter>menu\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\ImGui\anime_girl.h">
+      <Filter>menu\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk-offsets\offsets.hpp">
+      <Filter>sdk-offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk-offsets\sdk.h">
+      <Filter>sdk-offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Config.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\settings.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\math.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\obfuscate.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\CallStack-Spoofer.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\JunkCode.h">
+      <Filter>util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

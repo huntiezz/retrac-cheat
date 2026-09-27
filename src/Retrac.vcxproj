@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e8ed0d85-dbf2-434a-9fe5-d789e246be2d}</ProjectGuid>
+    <RootNamespace>Retrac</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Retrac</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PostBuildEvent>
+      <Command>if exist "$(ProjectDir)..\..\driver\driver\build\bin\kernel\driver.sys" (xcopy /Y /D "$(ProjectDir)..\..\driver\driver\build\bin\kernel\driver.sys" "$(OutDir)" /I) else (echo Post-build: driver.sys not found — build driver project first.)</Command>
+    </PostBuildEvent>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PostBuildEvent>
+      <Command>if exist "$(ProjectDir)..\..\driver\driver\build\bin\kernel\driver.sys" (xcopy /Y /D "$(ProjectDir)..\..\driver\driver\build\bin\kernel\driver.sys" "$(OutDir)" /I) else (echo Post-build: driver.sys not found — build driver project first.)</Command>
+    </PostBuildEvent>
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="driver\KernelInterface.cpp" />
+    <ClCompile Include="Entry.cpp" />
+    <ClCompile Include="menu\ImGui\imgui.cpp" />
+    <ClCompile Include="menu\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="menu\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="menu\ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="menu\ImGui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="menu\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="menu\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="menu\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="menu\TextureLoader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="driver\DriverConfig.h" />
+    <ClInclude Include="driver\communication.h" />
+    <ClInclude Include="driver\Includes\Structures.h" />
+    <ClInclude Include="driver\KernelInterface.h" />
+    <ClInclude Include="game\Aimbot\Aimbot.h" />
+    <ClInclude Include="game\Drawing\Draw.h" />
+    <ClInclude Include="game\Exploits\Exploits.h" />
+    <ClInclude Include="game\Gameloop.h" />
+    <ClInclude Include="game\world-esp\WorldESP.h" />
+    <ClInclude Include="menu\Font_bytes.h" />
+    <ClInclude Include="menu\icons.h" />
+    <ClInclude Include="menu\ImGui\anime_girl.h" />
+    <ClInclude Include="menu\ImGui\imconfig.h" />
+    <ClInclude Include="menu\ImGui\imgui.h" />
+    <ClInclude Include="menu\ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="menu\ImGui\imgui_impl_dx9.h" />
+    <ClInclude Include="menu\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="menu\ImGui\imgui_internal.h" />
+    <ClInclude Include="menu\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="menu\ImGui\imstb_textedit.h" />
+    <ClInclude Include="menu\ImGui\imstb_truetype.h" />
+    <ClInclude Include="menu\ImGui\stb_image.h" />
+    <ClInclude Include="menu\menu.h" />
+    <ClInclude Include="menu\overlay.h" />
+    <ClInclude Include="menu\TextureLoader.h" />
+    <ClInclude Include="sdk-offsets\offsets.hpp" />
+    <ClInclude Include="sdk-offsets\sdk.h" />
+    <ClInclude Include="util\common.h" />
+    <ClInclude Include="util\CallStack-Spoofer.h" />
+    <ClInclude Include="util\Config.h" />
+    <ClInclude Include="util\JunkCode.h" />
+    <ClInclude Include="util\math.h" />
+    <ClInclude Include="util\obfuscate.h" />
+    <ClInclude Include="util\settings.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

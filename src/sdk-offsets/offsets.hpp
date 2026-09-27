@@ -1,0 +1,97 @@
+#pragma once
+#include <cstdint>
+
+namespace Offsets {
+	uint64_t
+		UWorld = 0x0951B9D0,
+		GObjects = 0x093E0A40,
+		GameViewport = 0x0788,
+		ViewportWorld = 0x0078,
+		GameState = 0x0120,
+		AcknowledgedPawn = 0x0250,
+		PlayerArray = 0x238,
+		OwningGameInstance = 0x180,
+		LocalPlayers = 0x38,
+		PlayerController = 0x30,
+		ControlRotation = 0x0288, // AController::ControlRotation (Retrac: PCM POV often stale)
+		PlayerState = 0x0228,
+		RootComponent = 0x130,
+		PawnPrivate = 0x280,
+		Mesh = 0x280,
+		Nettconection = 0x418,
+		// Stale on Retrac: all three read back empty. The pose TArray is found by shape at
+		// runtime (sdk.h FindBonePoseOffset); these are kept only as documentation.
+		BoneArray = 0x0720, // USkeletalMeshComponent::CachedBoneSpaceTransforms (bone space)
+		BoneCache = 0x0730, // USkeletalMeshComponent::CachedComponentSpaceTransforms
+		BonePosePad = 0x06B8, // USkeletalMeshComponent::Pad_6B8 (unnamed TArray after AnimationData)
+		MasterPoseComponent = 0x0470, // USkinnedMeshComponent::MasterPoseComponent
+		bIsDying = 0x0552,
+		children = 0x0120,
+		ComponentToWorld = 0x1C0,
+		Realitivelocation = 0x11C,
+        RelativeRotation = 0x128,
+		playercameramanager = 0x02B8,
+		DefaultFOV = 0x0238, // APlayerCameraManager::DefaultFOV (Engine_classes.hpp)
+		PcmModifiableFov = 0x023C, // padding after DefaultFOV; not a second FOV
+		CameraCache = 0x0290, // APlayerCameraManager::CameraCache; default 0/90 POV, not projected
+		LastFrameCameraCache = 0x0880, // APlayerCameraManager::LastFrameCameraCache
+		ViewTarget = 0x0E70, // APlayerCameraManager::ViewTarget; POV at +0x10
+		PendingViewTarget = 0x1470, // APlayerCameraManager::PendingViewTarget
+		camera_cache_private = 0x1AA0, // APlayerCameraManager::CameraCachePrivate
+		LastFrameCameraCachePrivate = 0x2090, // APlayerCameraManager::LastFrameCameraCachePrivate
+		FreeCamDistance = 0x26A0, // APlayerCameraManager::FreeCamDistance
+		FreeCamOffset = 0x26A4, // APlayerCameraManager::FreeCamOffset (debug free-cam)
+		ViewTargetOffset = 0x26B0, // APlayerCameraManager::ViewTargetOffset
+		GlobalAnimRateScale = 0x0770,
+		bIsReloadingWeapon = 0x02B1,
+	    LastFireTime = 0x08EC,
+	    LastFireTimeVerified = 0x08F0,
+	    CurrentWeapon = 0x05C0,
+		WeaponData = 0x0378,
+		AmmoCount = 0x0964,
+		Playername = 0x0300,
+        Platform = 0x03A8,
+		Rarity = 0x0050,
+		ItemName = 0x70,
+		FLength = 0x30,
+		FData = 0x28,
+		TriggerType = 0x09DC,
+		CharacterMovement = 0x0288,
+		MovementMode = 0x0168,
+		BrakingDecelerationFlying = 0x01C0,
+		LastUpdateLocation = 0x0250,
+		LastUpdateVelocity = 0x025C,
+		GravityScale = 0x0150,
+		MaxFlySpeed = 0x0198,
+        BuildingState = 0x11A8,
+        TargetSource = 0x08F8,
+        WhileCrouched = 0x0904,
+        WhileTargeting = 0x0910,
+        LocationUnderReticle = 0x1E90,
+        TeamIndex = 0x0E88,
+        KillScore = 0x0E9C,
+        ViewPitchMin = 0x2784,
+        ViewPitchMax = 0x2788,
+        ViewYawMin = 0x278C,
+        ViewYawMax = 0x2790,
+        SkeletalMeshes = 0x37E0,
+        bRenderCustomDepth = 0x0216,
+        CustomDepthStencilValue = 0x021C,
+        Levels = 0x138,
+        PersistentLevel = 0x30,
+        ActorsArray = 0x98,
+        ActorsCount = 0xA0,
+        LoadedLevel = 0x128,
+        PrimaryPickupItemEntry = 0x02A8,
+        ItemDefinition = 0x18,
+        DisplayName = 0x70,
+        bPickedUp = 0x04E0,
+        bAlreadySearched = 0x0C71,
+        ReplicatedLootTier = 0x0BFC,
+        VehicleCachedSpeed = 0x09A4,
+        VehicleAttributes = 0x0C90,  
+        ItemRarity = 0x50,
+        LootNoiseRange = 0x0C20,
+        HighestRarity = 0x0C70, 
+        SearchText = 0x0C98; 
+};
