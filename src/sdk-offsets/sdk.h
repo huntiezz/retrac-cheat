@@ -3970,6 +3970,10 @@ inline bool ReadPlayerReticleWorld(uintptr_t playerController, Vector3& out) {
 	return true;
 }
 
+inline bool PovMatchesEngineControlRotation(uintptr_t playerController, const Vector3& povRot);
+inline bool TryScanLiveMinimalView(uintptr_t pcm, const Vector3& pawn, Vector3& outLoc, Vector3& outRot,
+                                   float& outFov, uint32_t& outOffset);
+
 // Third-person view rotators often differ from ControlRotation; reticle center error is the gate.
 inline bool PovPassesReticleGate(const Vector3& location, const Vector3& rotation, float fov,
                                  float aspectRatio, uintptr_t playerController,

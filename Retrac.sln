@@ -5,8 +5,6 @@ VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Retrac", "src\Retrac.vcxproj", "{E8ED0D85-DBF2-434A-9FE5-D789E246BE2D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "driver", "..\driver\driver\driver.vcxproj", "{8929B6B3-FC5E-4897-B760-31E21895716B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -23,12 +21,6 @@ Global
 		{E8ED0D85-DBF2-434A-9FE5-D789E246BE2D}.Release|x64.Build.0 = Release|x64
 		{E8ED0D85-DBF2-434A-9FE5-D789E246BE2D}.Release|x86.ActiveCfg = Release|Win32
 		{E8ED0D85-DBF2-434A-9FE5-D789E246BE2D}.Release|x86.Build.0 = Release|Win32
-		{8929B6B3-FC5E-4897-B760-31E21895716B}.Debug|x64.ActiveCfg = stable|x64
-		{8929B6B3-FC5E-4897-B760-31E21895716B}.Debug|x64.Build.0 = stable|x64
-		{8929B6B3-FC5E-4897-B760-31E21895716B}.Debug|x86.ActiveCfg = stable|x64
-		{8929B6B3-FC5E-4897-B760-31E21895716B}.Release|x64.ActiveCfg = stable|x64
-		{8929B6B3-FC5E-4897-B760-31E21895716B}.Release|x64.Build.0 = stable|x64
-		{8929B6B3-FC5E-4897-B760-31E21895716B}.Release|x86.ActiveCfg = stable|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
